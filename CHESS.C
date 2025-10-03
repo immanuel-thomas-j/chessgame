@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <conio.h>
 #include <string.h>
-
-/* Initial chess board */
 char board[8][8] = {
     {'r','n','b','q','k','b','n','r'},
     {'p','p','p','p','p','p','p','p'},
@@ -29,15 +27,12 @@ void printBoard() {
     }
     printf("  -----------------\n");
 }
-
-/* Check if move is inside the board */
 int validMove(int r1, int c1, int r2, int c2) {
     if (r1 < 0 || r1 > 7 || r2 < 0 || r2 > 7) return 0;
     if (c1 < 0 || c1 > 7 || c2 < 0 || c2 > 7) return 0;
     return 1;
 }
 
-/* Make a move */
 void makeMove(int r1, int c1, int r2, int c2) {
     board[r2][c2] = board[r1][c1];
     board[r1][c1] = '.';
@@ -61,7 +56,6 @@ int main() {
             continue;
         }
 
-        /* Convert chess notation to array index */
         c1 = move[0] - 'a';
         r1 = 8 - (move[1] - '0');
         c2 = move[2] - 'a';
@@ -80,3 +74,4 @@ int main() {
     getch();
     return 0;
 }
+
