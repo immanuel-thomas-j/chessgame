@@ -11,8 +11,6 @@ char board[8][8] = {
     {'P','P','P','P','P','P','P','P'},
     {'R','N','B','Q','K','B','N','R'}
 };
-
-/* Print the chess board */
 void printBoard() {
     int i, j;
     clrscr();
@@ -74,4 +72,5 @@ int main() {
     getch();
     return 0;
 }
+
 
